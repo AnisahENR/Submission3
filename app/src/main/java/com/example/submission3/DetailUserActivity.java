@@ -28,7 +28,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DetailUser extends AppCompatActivity {
+public class DetailUserActivity extends AppCompatActivity {
     public static final String USERNAME = "username";
     ApiService service;
     Call<UsersResponse> CallBody;
@@ -100,14 +100,14 @@ public class DetailUser extends AppCompatActivity {
                             .into(ava);
 
                 } else {
-                    Toast.makeText(DetailUser.this, response.message(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetailUserActivity.this, response.message(), Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<UsersResponse> call, Throwable t) {
                 progressBar.setVisibility(View.INVISIBLE);
-                Toast.makeText(DetailUser.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailUserActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
         });
@@ -121,9 +121,11 @@ public class DetailUser extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         if (item.getItemId() == R.id.icon_setting) {
-            Intent i = new Intent(android.provider.Settings.ACTION_LOCALE_SETTINGS);
-            startActivity(i);
+            startActivity(new Intent(android.provider.Settings.ACTION_LOCALE_SETTINGS));
+        } else if (item.getItemId() == R.id.icon_favorite) {
+            startActivity(new Intent(DetailUserActivity.this, FavoriteActivity.class));
         } else if (item.getItemId() == android.R.id.home) {
             finish();
         } else {

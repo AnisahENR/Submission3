@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Submission2</string>
+    <string name="app_name">Submission3</string>
     <string name="hint_search">Find Your Item</string>
     <string name="title_activity_detail_user">Detail User</string>
     <string name="tab_text_1">Follower</string>
@@ -7,4 +7,6 @@
     <string name="text_judul">Search List Results</string>
     <string name="judulbesar">Hi, World</string>
     <string name="judulkecil">I am Anisah Denis</string>
+
+    <string name="title_favorite">Favorite User</string>
 </resources>

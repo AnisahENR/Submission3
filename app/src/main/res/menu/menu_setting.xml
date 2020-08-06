@@ -8,4 +8,11 @@
         android:title="Setting"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/icon_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:orderInCategory="100"
+        android:title="Setting"
+        app:showAsAction="always" />
+
 </menu>

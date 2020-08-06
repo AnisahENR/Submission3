@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.example.submission3.DetailUser;
+import com.example.submission3.DetailUserActivity;
 import com.example.submission3.model.UserModel;
 import com.example.submission3.R;
 import com.mikhaellopez.circularimageview.CircularImageView;
@@ -73,7 +73,7 @@ public class AdapterListUser extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 @Override
                 public void onClick(View view) {
 
-                    Intent in = new Intent(ctx, DetailUser.class);
+                    Intent in = new Intent(ctx, DetailUserActivity.class);
                     in.putExtra("username", obj.login);
                     ctx.startActivity(in);
 
