@@ -14,9 +14,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.submission3.BuildConfig;
+import com.example.submission3.R;
 import com.example.submission3.adapter.AdapterListFollow;
 import com.example.submission3.model.UserModel;
-import com.example.submission3.R;
 import com.example.submission3.response.FollowerResponse;
 import com.example.submission3.retrofit.ApiService;
 import com.example.submission3.retrofit.ServiceGenerator;
@@ -41,8 +41,7 @@ public class ListFollowerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_follower, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_follower, container, false);
 
     }
 

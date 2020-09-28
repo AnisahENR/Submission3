@@ -2,18 +2,6 @@ package com.example.submission3;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.example.submission3.response.UsersResponse;
-import com.example.submission3.retrofit.ApiService;
-import com.example.submission3.retrofit.ServiceGenerator;
-import com.google.android.material.tabs.TabLayout;
-
-import androidx.appcompat.widget.Toolbar;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,7 +9,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.viewpager.widget.ViewPager;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.submission3.response.UsersResponse;
+import com.example.submission3.retrofit.ApiService;
+import com.example.submission3.retrofit.ServiceGenerator;
 import com.example.submission3.ui.main.SectionsPagerAdapter;
+import com.google.android.material.tabs.TabLayout;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
 import retrofit2.Call;

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class AdapterListUser extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private ArrayList<UserModel> items = new ArrayList<>();
+    private ArrayList<UserModel> items;
 
     private Context ctx;
     private OnItemClickListener mOnItemClickListener;

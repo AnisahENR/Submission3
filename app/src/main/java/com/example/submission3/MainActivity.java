@@ -6,6 +6,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
@@ -25,10 +27,13 @@ import com.example.submission3.retrofit.ServiceGenerator;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -132,6 +137,24 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void setRepeatingAlarm(Context context, String type, String time, String message) {
+        if (isDateInvalid(time, TIME_FORMAT)) return;
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(context,MainActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        intent.putExtra(EXTRA_TYPE, type);
+        String[] timeArray = time.split(":");
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY, Integer.parseInt(timeArray[0]));
+        calendar.set(Calendar.MINUTE, Integer.parseInt(timeArray[1]));
+        calendar.set(Calendar.SECOND, 0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, ID_REPEATING, intent, 0);
+        if (alarmManager != null) {
+            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
+        }
+        Toast.makeText(context, "Repeating alarm set up", Toast.LENGTH_SHORT).show();
     }
 
     @Override

@@ -42,8 +42,7 @@ public class ListFollowingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View view = inflater.inflate(R.layout.fragment_follower, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_follower, container, false);
     }
 
     @Override

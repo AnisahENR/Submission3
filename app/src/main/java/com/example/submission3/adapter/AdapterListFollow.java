@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class AdapterListFollow extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private ArrayList<UserModel> items = new ArrayList<>();
+    private ArrayList<UserModel> items;
 
     private Context ctx;
     private AdapterListFollow.OnItemClickListener mOnItemClickListener;

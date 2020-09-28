@@ -28,7 +28,8 @@
             android:layout_height="100dp"
             android:src="@drawable/photo_female_1"
             tools:layout_editor_absoluteX="-3dp"
-            tools:layout_editor_absoluteY="6dp" />
+            tools:layout_editor_absoluteY="6dp"
+            android:contentDescription="@string/app_name"/>
 
     </androidx.cardview.widget.CardView>
 
