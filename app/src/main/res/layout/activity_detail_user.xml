@@ -62,9 +62,9 @@
                 <ImageView
                     android:layout_width="@dimen/spacing_large"
                     android:layout_height="@dimen/spacing_large"
-                    android:tint="@color/white"
                     app:srcCompat="@drawable/ic_business"
-                    tools:ignore="VectorDrawableCompat" />
+                    tools:ignore="VectorDrawableCompat"
+                    app:tint="@color/white" />
 
                 <View
                     android:layout_width="@dimen/spacing_medium"
@@ -93,9 +93,9 @@
                 <ImageView
                     android:layout_width="@dimen/spacing_large"
                     android:layout_height="@dimen/spacing_large"
-                    android:tint="@color/white"
                     app:srcCompat="@drawable/ic_browser"
-                    tools:ignore="VectorDrawableCompat" />
+                    tools:ignore="VectorDrawableCompat"
+                    app:tint="@color/white" />
 
                 <View
                     android:layout_width="@dimen/spacing_medium"
@@ -124,9 +124,9 @@
                 <ImageView
                     android:layout_width="@dimen/spacing_large"
                     android:layout_height="@dimen/spacing_large"
-                    android:tint="@color/white"
                     app:srcCompat="@drawable/ic_location"
-                    tools:ignore="VectorDrawableCompat" />
+                    tools:ignore="VectorDrawableCompat"
+                    app:tint="@color/white" />
 
                 <View
                     android:layout_width="@dimen/spacing_medium"
